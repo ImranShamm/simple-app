@@ -18,6 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
 </head>
 <body>
     <div id="app">
@@ -49,6 +50,19 @@
                                 </li>
                             @endif --}}
                         @else
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                              <ul class="navbar-nav">
+                                <li class="nav-item {{ Request::is('home*') ? 'active' : '' }}">
+                                  <a class="nav-link" href="{{ URL::to('home') }}">Home</a>
+                                </li>
+                                <li class="nav-item {{ Request::is('companies*') ? 'active' : '' }}">
+                                  <a class="nav-link" href="{{ URL::to('companies') }}">Companies</a>
+                                </li>
+                                <li class="nav-item {{ Request::is('employees*') ? 'active' : '' }}">
+                                  <a class="nav-link" href="#">Employees</a>
+                                </li>
+                              </ul>
+                            </div>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
@@ -76,5 +90,9 @@
             @yield('content')
         </main>
     </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://use.fontawesome.com/9538974051.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    @stack('scripts')
 </body>
 </html>
