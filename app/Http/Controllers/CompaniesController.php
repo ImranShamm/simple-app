@@ -18,11 +18,10 @@ class CompaniesController extends Controller
     {
       //sort by created_at
       $companies = Companies::orderBy('created_at', 'desc')->paginate(10);
-      $users = auth()->user()->name;
+
 
       return view('companies.index',
-          ['companies' => $companies],
-          ['users' => $users]
+          ['companies' => $companies]
       );
     }
 
@@ -35,9 +34,7 @@ class CompaniesController extends Controller
     {
       $users = auth()->user()->name;
 
-      return view('companies.create',
-       ['users' => $users]
-      );
+      return view('companies.create');
     }
 
     /**
@@ -54,7 +51,7 @@ class CompaniesController extends Controller
       ]);
 
       $add = new Companies;
-      $add->id = Uuid::uuid4()->getHex();;
+      $add->id = Uuid::uuid4()->getHex();
       $add->name = $request->company_name;
       $add->email = $request->email;
       $add->website = $request->website;
@@ -89,7 +86,7 @@ class CompaniesController extends Controller
     public function edit($id)
     {
       $companies = Companies::find($id);
-      
+
       return view('companies.edit',
       ['companies' => $companies]
      );
