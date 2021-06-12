@@ -30,3 +30,8 @@ Route::put('companies/update', 'CompaniesController@update');
 Route::get('companies/{id}/destroy', 'CompaniesController@destroy');
 Route::resource('companies', 'CompaniesController');
 
+//Employees
+Route::put('employees/update', 'EmployeesController@update');
+Route::get('employees/{id}/destroy', 'EmployeesController@destroy');
+Route::resource('employees', 'EmployeesController');
+

@@ -59,7 +59,7 @@
                                   <a class="nav-link" href="{{ URL::to('companies') }}">Companies</a>
                                 </li>
                                 <li class="nav-item {{ Request::is('employees*') ? 'active' : '' }}">
-                                  <a class="nav-link" href="#">Employees</a>
+                                  <a class="nav-link" href="{{ URL::to('employees') }}">Employees</a>
                                 </li>
                               </ul>
                             </div>
@@ -93,6 +93,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <script src="https://use.fontawesome.com/9538974051.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
     @stack('scripts')
 </body>
 </html>
