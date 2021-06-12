@@ -1,0 +1,44 @@
+Pre-Requisite: You need to install Laravel on your machine
+
+
+To install the laravel application into your localhost server,
+Assuming you have the link to the application in Github.com
+
+1. IF you are using Visual Studio Code, on your keyboard press CTRL+SHIFT+P
+   Clone the link "https://github.com/ImranShamm/simple-app"
+
+2. IF you are download the application file in Zip, extract it in your localhost directory. (Assuming the directory is in www), and extract it.
+
+3. Create new database inside your local, give it any name you wanted
+
+4. Change the DB_DATABASE based on your database given in previous step inside .ENV file.
+   I did not push any .ENV file, but you can copy the .ENV.EXAMPLE and change it there
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=employees_management
+DB_USERNAME=root
+DB_PASSWORD=
+
+5. Run the following command to migrate all the tables inside your database->
+   php artisan migrate
+
+6. Run the seeder to pre-insert the admin credentials, this will insert the admin name, email with encrypted password.
+   php artisan db:seed --class=UserSeeder
+  //note that the email will be admin@admin.com and the password is password, view UserSeeder.php for details.
+
+7. Go the homepage and click Login on the top right of the page.
+
+8. Login with the admin credentials
+
+9. Play around, you can make a simple CRUD in this simple application.
+
+Have a nice day!!
+
+Regards,
+ImranShamm
+
+
+
+
