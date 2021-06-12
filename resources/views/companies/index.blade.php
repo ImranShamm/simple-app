@@ -48,15 +48,7 @@
 @push('scripts')
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script>
-  $(".alert").show(() => {
-    setTimeout(() => {
-        $(".alert").fadeTo(500, 1).slideUp(500, () => {
-        })
-    }, 4000)
-  });
-</script>
-<script>
-  $('#delete').on('click', function (event) {
+   $(document).on("click", "#delete", function (event) {
     event.preventDefault();
     const url = $(this).attr('href');
     swal({
