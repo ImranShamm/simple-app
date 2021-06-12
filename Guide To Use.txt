@@ -12,7 +12,8 @@ Assuming you have the link to the application in Github.com
 3. Create new database inside your local, give it any name you wanted
 
 4. Change the DB_DATABASE based on your database given in previous step inside .ENV file.
-   I did not push any .ENV file, but you can copy the .ENV.EXAMPLE and change it there
+   I did not push any .ENV file, create new file in the main directory, and give the name .ENV
+   but you can copy the .ENV.EXAMPLE contents and change it there
 
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
