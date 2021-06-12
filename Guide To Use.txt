@@ -22,6 +22,12 @@ DB_DATABASE=employees_management
 DB_USERNAME=root
 DB_PASSWORD=
 
+
+//Assuming you are already managed to run the application on your browser.
+//IF THERE IS ANY ERROR WHILE LAUNCHING THE APPLICATION, RUN THIS COMMAND [to update the environment]
+ composer update
+
+
 5. Run the following command to migrate all the tables inside your database->
    php artisan migrate
 
